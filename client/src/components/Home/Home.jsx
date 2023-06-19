@@ -62,13 +62,13 @@ const Home = () => {
           activity: activityFilter,
         };
         dispatch(countryFilter(filters));
-        setOrderBy(""); // Restablecer el estado orderBy
+        setOrderBy(""); // setea el select de ordenamiento, para que cada vez que hago un filtro, vuelva a la option Order by...
       };
 
     const handleOrderByName = (event) => {
         event.preventDefault();
         const selectedValue = event.target.value;
-        setOrderBy(selectedValue);
+        setOrderBy(selectedValue); //indico que el estado OrderBy tenga el valor de la option seleccionada
         dispatch(ordeByName(selectedValue));
       };
     
