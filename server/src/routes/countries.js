@@ -18,23 +18,19 @@ const router = Router();
 router.get('/', async (req, res) => {
     const {name} = req.query; //guardo la info que obtengo por query (name)
     await ApiToDB(); //Guardo en mi DB todos los paises.
-    //const dbData = await Country.findAll(); <----------???????
     const DBinfo = await getDBinfo(); //obtengo la info que tengo ahora en mi DB
-    // let countryList = []; //Creo este arrego, para guardar los objetos con la info de cada pais
     
     try {
         if(!name) {
-            // await DBinfo.map(pais => countryList.push({id:pais.id, name: pais.name, continent: pais.continent, flag_img: pais.flag_img, population: pais.population,activities: pais.activities })); //como hago ahoracon activities?
 
             return res.status(200).json(DBinfo);
-            //si no me pasan "name" por query, hago un mapeo de todos los paises que tengo en mi DB y voy pusheando los objetos especificando sus propiedades dentro de mi array countryList para poder devolverlo. 
-            //¿Por que no hago un Country.findAll() y listo? Porque de esta forma puedo mapear el atributo "activities", (que Sequelize que genero automaticamente cuando estableci la relacion entre Country y Activity), y devolver solo los nombres de las actividades y no el objeto entero junto con las estaciones, la duracion, etc. 
+            //si no me pasan "name" por query, devuelvo todos los paises. 
         }
         else {
             const filteredCountry = DBinfo.filter(element => element.name.toLowerCase().includes(name.toLowerCase()));
             //si si obtengo a "name" por query, hago un filter de lo que tengo en mi BD y comparo, si alguno de los nombres(propiedad name) de todos los objetos(paises) en minusculas (convertida toda la palabra en minuscula), incluye a lo que me llega en "name" tambien convertido en minuscula. ¿Por que?, para de esta forma buscar cualquier tipo de coincidencia, por ejemplo si en mi objeto de mi pais Argentina, su name es Argentina con minuscula, si me viene por query 'argent' va a devolver igual mi objeto con name "Argentina". 
 
-            // if(!filteredCountry.length) return res.status(400).json({message: 'Country not found'});
+            // if(!filteredCountry.length) return res.status(400).json({message: 'Country not found'}); // lo saque para poder hacer el "country not found" en el front, necesitaba un array vacio.
             return res.status(200).json(filteredCountry)
             //si el array que me devuelve el filter esta vacio, devuelvo un estadi 400 y un mensaje adecuando. Sino, un estado 200 OK, y mi array con mi objeto de paises que tuvieron una coincidencia en su propiedad name. 
         }
@@ -50,7 +46,7 @@ router.get('/', async (req, res) => {
 //Tiene que incluir los datos de las actividades turísticas asociadas a este país.
 
 router.get('/:idPais', async (req, res) => {
-    const {idPais} = req.params; //guardo la info que obtengo por query (name)
+    const {idPais} = req.params; //guardo la info que obtengo por params (idPais)
     const allCountry = await getDBinfo();//obtengo la info que tengo ahora en mi DB
 
     try {

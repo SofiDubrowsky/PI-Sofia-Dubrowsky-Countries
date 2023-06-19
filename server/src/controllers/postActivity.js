@@ -12,7 +12,7 @@ const postActivity = async (name, difficulty, duration, season, countryId) => {
                 season,
             }
         })
-        console.log(created); //veo en consola si se creo o no una actividad nueva
+        // console.log(created); //veo en consola si se creo o no una actividad nueva
         await actividad.setCountries(countryId);//establezco la relacion con el pais correspondiente
         return actividad; //devuelvo el objeto con mi actividad, relacionada con el pais correspondiente. 
     } catch (error) {

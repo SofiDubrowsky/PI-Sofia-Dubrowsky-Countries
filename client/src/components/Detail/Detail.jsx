@@ -5,7 +5,7 @@ import { getCountryDetail } from "../../redux/actions";
 import { useEffect } from "react";
 import styles from './Detail.module.css'
 
-const Detail = (props) => {
+const Detail = () => {
   
   const {id}= useParams();
   const countries= useSelector(state => state.countryDetail)

@@ -33,7 +33,7 @@ const reducer = (state = initialState, {type,payload}) => {
             }
             return {...state, countries:PaisesBuscados,};       
 
-        // ----------------------------------------------------------------------------------
+        // -------------------------------------FILTRADOS-----------------------------------
 
         case FILTER_COUNTRY:
             let countriesFiltrados = [...state.allCountries]
@@ -52,6 +52,8 @@ const reducer = (state = initialState, {type,payload}) => {
                 ...state,
                 countries: countriesFiltrados,
             }
+
+        // -------------------------------------ORDENAMIENTOS----------------------------------------
 
         case ORDER_BY_NAME:
             const allcountriescopy = [...state.countries]

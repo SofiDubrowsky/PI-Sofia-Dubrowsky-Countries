@@ -24,8 +24,8 @@ module.exports = (sequelize) => {
     capital: {
       type: DataTypes.STRING,
       allowNull: false,
-      charset: 'utf8',
-      collate: 'utf8_general_ci',
+      charset: 'utf8', //  indica el conjunto de caracteres utilizado para codificar la cadena de caracteres en la base de datos, UTF-8 -> una amplia gama de caracteres de diferentes idiomas. (paises con nombres de capitales raros)
+      collate: 'utf8_general_ci', // ci case-insensitive, permite que las consultas y comparaciones de cadenas sean independientes de las diferencias de mayúsculas y minúsculas.
     },
     subregion: {
       type: DataTypes.STRING

@@ -1,23 +1,23 @@
 const { Activity, Country } = require('../db.js');
 
+//Borrar una actividad
 const deleteActivity = async (name) => {
   try {
     const activity = await Activity.findOne({ where: { name } });
 
     if (!activity) {
-      return false; // La actividad no se encontró
+      return false; 
     }
 
-    // Desvincula la actividad de todos los países relacionados
+    // desvincula la actividad de todos los países relacionados
     await activity.setCountries([]);
 
-    // Elimina la actividad
+    // elimina la actividad
     await activity.destroy();
 
-    return true; // Actividad eliminada con éxito
+    return true; 
   } catch (error) {
     console.log('Error al eliminar la actividad', error);
-    throw error;
   }
 };
 

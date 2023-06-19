@@ -5,8 +5,8 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('Activity', {
     id: {
-       type: DataTypes.UUID,
-       defaultValue: DataTypes.UUIDV4,
+       type: DataTypes.UUID, //Identificador Universalmente Único
+       defaultValue: DataTypes.UUIDV4, //utilizo el V4 que genera un valor aleatorio que es lo que utilizan la mayoria de los sistemas modernos.
        primaryKey: true
     },
     name: {

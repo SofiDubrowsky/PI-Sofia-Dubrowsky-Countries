@@ -13,21 +13,20 @@ const reload = () => {
 
 const Home = () => {
     
-    const countries = useSelector(state => state.countries)
     const dispatch= useDispatch();
-
-    const [currentPage, setCurrentPage] = useState(1);
-    const elementsPerPage = 10;
-
-    const indexOfLastElement = currentPage * elementsPerPage;
-    const indexOfFirstElement = indexOfLastElement - elementsPerPage;
-    const currentElements = countries?.slice(indexOfFirstElement, indexOfLastElement);
-
+    const countries = useSelector(state => state.countries)
     const allActivities = useSelector((state) => state.activities);
 
-    const audioRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(false);
+ //------------------------Paginado------------------------    
+    const [currentPage, setCurrentPage] = useState(1); //este estado sirve para indicar cual es la pagina en la que estamos parados
+    const elementsPerPage = 10; // esta es la cantidad de items que vamos a presentar por pagina
+
+    const indexOfLastElement = currentPage * elementsPerPage; // obtenemos el indice del primer elemento y el ultimo de cada pagina.
+    const indexOfFirstElement = indexOfLastElement - elementsPerPage;
+    const currentElements = countries?.slice(indexOfFirstElement, indexOfLastElement); // como countries es un array, utilizamos el metodo slice para quedarnos con los items desde el primero hasta el ultimo que vamos a presentar en la pagina en la que nos encontramos actualmente. 
+
     
+ //------------------------useEffect------------------------    
     useEffect(()=> {
         dispatch(getCountries())
       },[dispatch])
@@ -36,11 +35,14 @@ const Home = () => {
         dispatch(getActivities())
     }, [dispatch]);
 
+//----------------------ESTADOS PARA FILTROS Y ORDEN-------------------------
 
    const [continentFilter,setContinentFilter] = useState("All")
    const [activityFilter,setActivityFilter] = useState("All")
    const [orderBy, setOrderBy] = useState("");
-    
+
+//----------------------FILTROS-------------------------   
+   
     const handleFilterContinent = (event) => {
         event.preventDefault();
         setContinentFilter(event.target.value)
@@ -51,6 +53,7 @@ const Home = () => {
         setActivityFilter(event.target.value)
     }
 
+//----------------------ORDEN-------------------------
     const handleFilter = () => {
         handleButtonClick()
         setCurrentPage(1);
@@ -69,12 +72,17 @@ const Home = () => {
         dispatch(ordeByName(selectedValue));
       };
     
-    const totalPages = Math.ceil(countries?.length / elementsPerPage)
+//------------------------Paginado------------------------ 
+    const totalPages = Math.ceil(countries?.length / elementsPerPage) //dividimos el total de paises por la cantidad que vamos a colocar en cada pagina para obtener el total de paginas.
     
-    const handlePageChange = (pageNumber) => {
+    const handlePageChange = (pageNumber) => { 
         setCurrentPage(pageNumber);
-    };
+    };//handler que maneja la pagina en la cual estamos. 
     
+    //----------------------Audio Botones-------------------------
+    const audioRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+
     const handleButtonClick = () => {
         setIsPlaying(true);
         audioRef.current.play();
@@ -90,7 +98,7 @@ const Home = () => {
 
             <div className={style.home}>
                <div className={style.costado}>
-                
+           {/* ------------------Filtros-------------------- */}     
             <div className={style.filterContainer}>
                 <h1 className={style.title}>Filters</h1>
                 <div>
@@ -121,10 +129,10 @@ const Home = () => {
                 </div>
 
                 <button className={style.reload} type="submit" onClick={handleFilter}>Apply</button>
-                <audio ref={audioRef} src={soundFile} onEnded={() => setIsPlaying(false)}/>
+                <audio ref={audioRef} src={soundFile} onEnded={() => setIsPlaying(false)}/> {/*Sonido*/}
             </div>
 
-                {/* ---------Ordenamiento por nombre--------- */}
+                {/* ---------Ordenamiento por nombre y poblacion--------- */}
                 
                 <div className={style.orderContainer}>
                     <h1 className={style.title}>Order By</h1>
@@ -137,14 +145,7 @@ const Home = () => {
                        <option value='descPopulation'>Population High-Low</option>
                     </select>
                 </div>
-                
-                        {/* ---------Ordenamiento por Poblacion--------- */}
-                
-                    {/* <select onChange={handleOrderByPopulation}>
-                       <option value="" disabled selected>Population</option>
-                    </select> */}
                
-
                 <button className={style.reload} onClick={()=>{reload()}}>Re-load</button>
                </div>
 
@@ -172,9 +173,6 @@ const Home = () => {
                  </div>
             </div>
             </div>
-       
-
-           
 
        </div>
     )

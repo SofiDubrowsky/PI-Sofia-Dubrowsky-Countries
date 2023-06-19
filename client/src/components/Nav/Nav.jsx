@@ -10,7 +10,7 @@ const Nav = () => {
         
         <NavLink className={style.countries} to="/home">Countries PI</NavLink>
         <NavLink className={style.select} to="/">Exit</NavLink> 
-       <NavLink className={style.select} to="/form">Create Activity</NavLink>
+        <NavLink className={style.select} to="/form">Create Activity</NavLink>
         <a
             href="https://www.linkedin.com/in/disof%C3%ADadubrowsky/"
             target="_blank"

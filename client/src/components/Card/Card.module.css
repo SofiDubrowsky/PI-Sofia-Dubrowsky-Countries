@@ -48,21 +48,14 @@
   border-radius: 20px;
   height: 100px;
   width: 140px;
-  align-self: center; /* Centra la imagen horizontalmente */
+  align-self: center; 
 }
-
-/* .contents {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 0%;
-} */
 
 .title {
   margin-top: 13px;
-  margin-bottom: 5px; /* Ajusta el valor según tus necesidades */
+  margin-bottom: 5px;
 }
 
 .subtitle {
-  margin-top: 5px; /* Ajusta el valor según tus necesidades */
+  margin-top: 5px; 
 }

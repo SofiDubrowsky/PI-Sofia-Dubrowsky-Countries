@@ -1,13 +1,12 @@
 const { Country } = require('../db.js');
-// const ApiData = require('./ApiData.js')
 
 
 const axios = require('axios');
 
-// //Obtengo la informacion de la Api
+//Obtengo la informacion de la Api
 const ApiData = async () => {
     try {
-        const response = await axios.get('http://localhost:5000/countries'); //destructuro la response de axios en su propiedad 'data' que es la info de la api
+        const response = await axios.get('http://localhost:5000/countries'); 
         const countries = await response.data.map(country => {
             return {
                 id: country.cca3,
@@ -19,7 +18,7 @@ const ApiData = async () => {
                 area: country.area? country.area: 'undefined',
                 population: country.population? country.population: 'undefined',
             }
-        }); //hago un mapeo de la respuesta de la api, y guardo en una constante un objeto con la info de la api que quiero guardad. El mapeo me va a devolver un array con esos objetos, donde cada objeto es un pais. 
+        }); //hago un mapeo de la respuesta de la api, y guardo en una constante un objeto con la info de la api que quiero guardar. El mapeo me va a devolver un array con esos objetos, donde cada objeto es un pais. 
         return countries; 
     } catch (error) {
         console.log('Error al obtener los datos de la Api', error);
@@ -28,7 +27,7 @@ const ApiData = async () => {
 
 
 
-// //Traigo la info de la Api y la cargo en mi Base de Datos
+//Traigo la info de la Api y la cargo en mi Base de Datos
 const ApiToDB = async () => {
     try {
         const DataBase = await Country.findAll(); //guardo en una constante todos los paises que existan en la Base de Datos
@@ -36,7 +35,7 @@ const ApiToDB = async () => {
         if(DataBase.length < 1) {
             const allCountries = await ApiData();
             await Country.bulkCreate(allCountries);
-        }//si no encuentro ningun pais en mi DB, guardo en una constante la respuesta de mi controler ApiData, que me devolvia un array de objetos con la informacion de la Api, donde cada objeto es un pais. Ejecuto el metodo bulkCreate, pasadole el array de objetos y cargar en mi DB todos los paises. 
+        }//si no encuentro ningun pais en mi DB, guardo en una constante la respuesta de mi controler ApiData. Ejecuto el metodo bulkCreate, pasadole el array de objetos y cargar en mi DB todos los paises. 
     } catch (error) {
         console.log('Error al cargar los datos de la Api en la Data Base',error);
     }

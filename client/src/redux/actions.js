@@ -1,4 +1,4 @@
-import { GET_ACTIVITIES, DELETE_ACTIVITIES, GET_COUNTRIES, GET_COUNTRY_DETAIL, CREATE_ACTIVITY,SEARCH_COUNTRY,FILTER_COUNTRY, ORDER_BY_NAME, ORDER_BY_POPULATION } from "./action-types";
+import { GET_ACTIVITIES, DELETE_ACTIVITIES, GET_COUNTRIES, GET_COUNTRY_DETAIL, CREATE_ACTIVITY,SEARCH_COUNTRY,FILTER_COUNTRY, ORDER_BY_NAME,} from "./action-types";
 
 import axios from 'axios';
 axios.defaults.baseURL = 'http://localhost:3001';
@@ -20,7 +20,6 @@ export const getCountryDetail = (id) => {
 export const createActivity = (payload) => {
     return async (dispatch) => {
         let info = await axios.post('/activities',payload);
-        // return info;
         return dispatch({ type: CREATE_ACTIVITY, payload: info.data });
     }
 }
@@ -70,9 +69,9 @@ export const ordeByName = (payload) => {
     }
 }
 
-export const orderByPopulation = (payload) => {
-    return {
-        type: ORDER_BY_POPULATION,
-        payload
-    }
-}
+// export const orderByPopulation = (payload) => {
+//     return {
+//         type: ORDER_BY_POPULATION,
+//         payload
+//     }
+// }  Al final no lo use porque junte los dos ordenamientos

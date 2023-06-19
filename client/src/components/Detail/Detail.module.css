@@ -96,15 +96,6 @@
      margin-top: 5px;
  }
 
-  .btnHome {
-    background-color: #788378;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 900ms;
-  }
-
   label {
     display: inline-block;
     background-color: transparent;
