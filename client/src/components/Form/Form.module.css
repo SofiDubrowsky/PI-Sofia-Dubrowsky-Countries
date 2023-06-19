@@ -1,0 +1,208 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    width: 500px;
+    padding: 10px;
+    border-radius: 15px;
+    font-family:"Consolas";
+    background-color: rgba(0, 0, 0, 0.253);
+    margin-left: 50px;
+    margin-right:50px;
+  }
+
+  .formContainerdel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    width: 500px;
+    padding: 10px;
+    border-radius: 15px;
+    font-family:"Consolas";
+    background-color: rgba(0, 0, 0, 0.253);
+    margin-left: 50px;
+    margin-right:50px;
+    height: 320px;
+  }
+
+  .titulo{
+    margin-top: 5px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 40px;
+    font-family:"Consolas";
+    font-weight: bold;
+    color: white;
+  }
+  
+  .formField {
+    align-items: center;
+    text-align: center;
+    height: 75px;
+    font-family:"Consolas";
+  }
+  
+  .formInput {
+    width: 200px;
+    height: 40px;
+    position: relative;
+    padding: 0px;
+    border: 0px;
+    font-family:"Consolas";
+    border-radius: 0px 10px 10px 0px;
+    background-color: rgb(53, 52, 52);
+    transition: 0.3s;
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(114, 114, 114);
+  }
+
+  .formInputdel {
+    width: 200px;
+    height: 40px;
+    position: relative;
+    padding: 0px;
+    border: 0px;
+    font-family:"Consolas";
+    border-radius: 10px;
+    background-color: rgb(53, 52, 52);
+    transition: 0.3s;
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(114, 114, 114);
+  }
+
+  .formInputt {
+    width: 200px;
+    height: 38px;
+    position: relative;
+    padding: 0px;
+    border: 0px;
+    font-family:"Consolas";
+    border-radius: 0px 10px 10px 0px;
+    background-color: rgb(53, 52, 52);
+    transition: 0.3s;
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .label{
+    padding: 7.5px;
+    width: 150px;
+    font-family:"Consolas";
+    border-radius: 10px 0px 0px 10px;
+    background-color: rgba(0, 0, 0, 0.384);
+    text-align: center;
+    position: relative;
+    border: 1px solid black;
+    display: inline-block;
+    font-size: 20px;
+  }
+
+.unidos{
+    height: 30px;
+    font-family:"Consolas";
+    margin-bottom: 10px;
+}
+
+  .formInput:hover{
+    background-color: white;
+    color: black
+  }
+
+  .formInputt:hover{
+    background-color: white;
+    color: black
+  }
+  
+  .formError {
+    color: red;
+    font-size: 13px;
+    margin-top: 0px; 
+  }
+
+  .elegidos{
+    font-family:"Consolas";
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+    width: 400px;
+    font-size: 20px;
+    color: white;
+
+  }
+
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family:"Consolas";
+    height: 580px;
+    
+  }
+
+  .reload{
+    width: 150px;
+    height: 30px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-family:"Consolas";
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    border-color: #ffffff;
+    color: black;
+     box-shadow: 0 0 5px 5px rgb(39, 39, 39);
+     -webkit-transition: all 150ms ease-in-out;
+    transition: 0.5s;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.reload:hover{
+    background-color: black;
+    color: white;
+} 
+
+.reload:disabled{
+  background-color: white;
+  color: rgb(100, 98, 98);
+  cursor:default;
+}
+
+.reloadd{
+    width: 160px;
+    height: 60px;
+    margin-top: 120px;
+    margin-bottom: 0px;
+    font-family:"Consolas";
+    border-radius: 10px;
+    background-color: rgb(53, 52, 52);
+    cursor: pointer;
+    border-color: #ffffff;
+    color: white;
+     box-shadow: 0 0 5px 5px rgb(39, 39, 39);
+     -webkit-transition: all 150ms ease-in-out;
+    transition: 0.5s;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.reloadd:hover{
+    background-color: black;
+    color: white;
+} 

@@ -1,0 +1,68 @@
+.divCard {
+  border-radius: 15px;
+  height:220px;
+  width:190px;
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: rgba(0, 0, 0, 0.452);
+  color: #f5efe8;
+  transition: 0.5s;
+  font-family:"Consolas";
+}
+
+.divCard:hover{
+  background-color: rgba(255, 255, 255, 0.452);
+  color: black
+}
+
+.divTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos verticalmente */
+  height: 120px;
+  padding: 0;
+}
+
+.divTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+  text-align: center; /* Centra el texto horizontalmente */
+  margin-top: 20px; /* Ajusta el valor según tus necesidades */
+  padding: 5px;
+}
+
+.divImg {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  top: 22px;
+
+}
+
+.imgCard {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  object-fit: cover;
+  border-radius: 20px;
+  height: 100px;
+  width: 140px;
+  align-self: center; /* Centra la imagen horizontalmente */
+}
+
+/* .contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0%;
+} */
+
+.title {
+  margin-top: 13px;
+  margin-bottom: 5px; /* Ajusta el valor según tus necesidades */
+}
+
+.subtitle {
+  margin-top: 5px; /* Ajusta el valor según tus necesidades */
+}

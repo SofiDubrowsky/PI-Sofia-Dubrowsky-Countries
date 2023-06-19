@@ -1,0 +1,130 @@
+.containerPage {
+    display: flex;
+    font-family:"Consolas";
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .containerImage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 10px;
+    width: 700px;
+    height: 569px;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-top: 5px;
+    background-color:rgba(0, 0, 0, 0.253);
+  }
+
+  .pais{
+    margin-top: 0px;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: black;
+    font-weight: bolder;
+  }
+
+  .image {
+    width: 60%;
+    background-color: #0000007b;
+    border-radius: 50px;
+    margin-left: 10px;
+  }
+
+  .containerDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 250px;
+    background-color:rgba(0, 0, 0, 0.555);
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    padding-bottom: 30px;
+    margin-top: 5px;
+    color: white;
+    margin-right: 10px;
+  }
+
+  .actcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 160px;
+    height:90px;
+    background-color: rgba(0, 0, 0, 0.452);
+    border: 2px solid black;
+    padding: 2px;
+    border-radius: 15px;
+    align-items: center;
+    color: white;
+  }
+
+.title{
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 40px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.text{
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.textsub{
+  text-transform: uppercase;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+ .actividades{
+     display: flex;
+     flex-direction:row;
+     justify-content: center;
+     border-radius: 20px;
+     flex-wrap: wrap;
+     gap: 5px;
+     align-items: center;
+     margin-top: 5px;
+ }
+
+  .btnHome {
+    background-color: #788378;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 900ms;
+  }
+
+  label {
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    font-size: 20px;
+
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    font-weight: bolder;
+    text-align: left;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .containerPage {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }

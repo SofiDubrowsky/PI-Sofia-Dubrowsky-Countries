@@ -1,0 +1,35 @@
+.select{
+    width: 80px;
+    height: 30px;
+    margin-bottom: 15px;
+    font-family:"Consolas";
+    border-radius: 10px;
+    background-color: rgb(53, 52, 52);
+    transition: 0.3s;
+    color: black;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.select:hover{
+    background-color: white;
+}
+
+.select:disabled{
+    color: rgb(73, 73, 73);
+    background-color: rgb(53, 52, 52);
+    cursor:default;
+}
+
+.text {
+    /* margin-top: 5px; */
+    font-family:"Consolas";
+    margin-bottom: 0px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+

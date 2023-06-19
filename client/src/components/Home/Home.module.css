@@ -1,0 +1,124 @@
+.container{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    height:515px;
+    width:1070px;
+    background-color: rgba(0, 0, 0, 0.253);
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family:"Consolas";
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.costado{
+    /* display: flex;
+    flex-direction: column; */
+    height:575px;
+    width:200px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.856);
+    margin-right: 5px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 35px;
+    margin-bottom: 25px;
+  }
+
+
+.subtitle {
+    margin-top: 5px;
+    margin-bottom: 3px; 
+    
+}
+
+.title {
+    margin-top: 0px;
+    margin-bottom: 35px;
+    background-color: white;
+    color: black;
+    width:200px;
+}
+
+.orderContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.select{
+    width: 150px;
+    height: 30px;
+    margin-bottom: 15px;
+    font-family:"Consolas";
+    border-radius: 10px;
+    background-color: rgb(53, 52, 52);
+    transition: 0.3s;
+}
+
+.select:hover{
+    background-color: white;
+}
+
+.reload{
+    width: 150px;
+    height: 40px;
+    margin-bottom: 15px;
+    font-family:"Consolas";
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    border-color: #ffffff;
+    color: black;
+     box-shadow: 0 0 5px 5px rgb(39, 39, 39);
+     -webkit-transition: all 150ms ease-in-out;
+    transition: 0.5s;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.reload:hover{
+    background-color: black;
+    color: white;
+} 
+
+.pag{
+  position: fixed;
+  margin-top: 525px;
+}
+
+.espacio{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.mensaje{
+    font-size: 30px;
+}

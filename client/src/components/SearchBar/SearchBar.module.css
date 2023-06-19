@@ -1,0 +1,127 @@
+.barra{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin: 5px;
+    height: 40px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.315);
+}
+
+.select{
+    font-family:"Consolas";
+    border-color: rgba(240, 248, 255, 0);
+    background-color: rgba(63, 62, 62, 0);
+    transition: 0.3s;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+
+.select:hover{
+    color: white;
+}
+
+.search{
+    width: 300px;
+    height: 30px;
+    margin-left: 250px;
+    font-family:"Consolas";
+    border-radius: 10px 0px 0px 10px;
+    background-color: white;
+    transition: 0.3s;
+    
+}
+
+.search:hover{
+    background-color: black;
+    color: white;
+} 
+
+.buttonsearch{
+    width: 90px;
+    height: 30px;
+    font-family:"Consolas";
+    border-radius: 0px 10px 10px 0px;
+    background-color: rgb(53, 52, 52);
+    transition: 0.3s;
+    color: black;
+    margin-left: 0x;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.buttonsearch:hover{
+    background-color: white;
+}
+.buttonsearch:disabled{
+    color: rgb(73, 73, 73);
+    background-color: rgb(53, 52, 52);
+    cursor:default;
+}
+
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: rgb(189, 189, 189);
+    transition: 0.5s;
+}
+
+a:hover{
+    color:white;
+}
+
+.countries{
+    font-family:"Consolas";
+    border-color: rgba(240, 248, 255, 0);
+    background-color: rgba(63, 62, 62, 0);
+    transition: 0.3s;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.img{
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+
+.alink:hover{
+    filter:invert(100%)
+}
+
+.buttonsearchh{
+    width: 120px;
+    height: 30px;
+    font-family:"Consolas";
+    border-radius: 10px;
+    background-color: rgb(53, 52, 52);
+    transition: 0.3s;
+    color: black;
+    margin-left: 0x;
+    margin-right:165px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.buttonsearchh:hover{
+    background-color: white;
+}
