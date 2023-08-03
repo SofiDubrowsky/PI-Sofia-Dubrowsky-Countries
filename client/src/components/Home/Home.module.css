@@ -1,5 +1,5 @@
 .container{
-    border: 2px solid rgb(0, 0, 0);
+    border: 0.4vh solid rgb(0, 0, 0);
     border-radius: 20px;
     display: flex;
     flex-direction: row;
@@ -29,7 +29,7 @@
     padding-bottom: 4.7vh;
     height:80vh;
     width:15vw;
-    border: 2px solid rgb(0, 0, 0);
+    border: 0.4vh solid rgb(0, 0, 0);
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.856);
     margin-right: 0.2%;

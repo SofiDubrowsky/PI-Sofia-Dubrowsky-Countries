@@ -3,14 +3,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border: 2px solid black;
-    width: 500px;
-    padding: 10px;
+    border: 0.4vh solid black;
+    width: 35vw;
+    padding: 4vh;
     border-radius: 15px;
     font-family:"Consolas";
     background-color: rgba(0, 0, 0, 0.253);
-    margin-left: 50px;
-    margin-right:50px;
+    margin-left: 5vw;
+    margin-right:4vw;
   }
 
   .formContainerdel {
@@ -18,23 +18,23 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border: 2px solid black;
-    width: 500px;
-    padding: 10px;
+    border: 0.4vh solid black;
+    width: 35vw;
+    padding: 4vh;
     border-radius: 15px;
     font-family:"Consolas";
     background-color: rgba(0, 0, 0, 0.253);
-    margin-left: 50px;
-    margin-right:50px;
-    height: 320px;
+    margin-left: 4vw;
+    margin-right:5vw;
+    height:50vh;
   }
 
   .titulo{
-    margin-top: 5px;
-    margin-bottom: 30px;
+    margin-top: 1.3vh;
+    margin-bottom: 2vh;
     text-transform: uppercase;
     text-decoration: underline;
-    font-size: 40px;
+    font-size: 6vh;
     font-family:"Consolas";
     font-weight: bold;
     color: white;
@@ -43,13 +43,13 @@
   .formField {
     align-items: center;
     text-align: center;
-    height: 75px;
+    height: 11.5vh;
     font-family:"Consolas";
   }
   
   .formInput {
-    width: 200px;
-    height: 40px;
+    width: 15vw;
+    height: 6.3vh;
     position: relative;
     padding: 0px;
     border: 0px;
@@ -57,15 +57,15 @@
     border-radius: 0px 10px 10px 0px;
     background-color: rgb(53, 52, 52);
     transition: 0.3s;
-    border: 1px solid black;
-    font-size: 20px;
+    border: 0.1vh solid black;
+    font-size: 3vh;
     text-align: center;
     color: rgb(114, 114, 114);
   }
 
   .formInputdel {
-    width: 200px;
-    height: 40px;
+    width: 15vw;
+    height: 6.3vh;
     position: relative;
     padding: 0px;
     border: 0px;
@@ -73,15 +73,15 @@
     border-radius: 10px;
     background-color: rgb(53, 52, 52);
     transition: 0.3s;
-    border: 1px solid black;
-    font-size: 20px;
+    border: 0.1vh solid black;
+    font-size: 3vh;
     text-align: center;
     color: rgb(114, 114, 114);
   }
 
   .formInputt {
-    width: 200px;
-    height: 38px;
+    width: 15vw;
+    height: 6vh;
     position: relative;
     padding: 0px;
     border: 0px;
@@ -89,29 +89,24 @@
     border-radius: 0px 10px 10px 0px;
     background-color: rgb(53, 52, 52);
     transition: 0.3s;
-    border: 1px solid black;
-    font-size: 20px;
+    border: 0.1vh solid black;
+    font-size: 3vh;
     text-align: center;
   }
 
   .label{
-    padding: 7.5px;
-    width: 150px;
+    padding: 1.2vh;
+    width: 11vw;
     font-family:"Consolas";
     border-radius: 10px 0px 0px 10px;
     background-color: rgba(0, 0, 0, 0.384);
     text-align: center;
     position: relative;
-    border: 1px solid black;
+    border: 0.1vh solid black;
     display: inline-block;
-    font-size: 20px;
+    font-size: 3vh;
   }
 
-.unidos{
-    height: 30px;
-    font-family:"Consolas";
-    margin-bottom: 10px;
-}
 
   .formInput:hover{
     background-color: white;
@@ -125,7 +120,7 @@
   
   .formError {
     color: red;
-    font-size: 13px;
+    font-size: 2vh;
     margin-top: 0px; 
   }
 
@@ -134,8 +129,8 @@
     justify-content: center;
     text-align: center;
     padding: 0px;
-    width: 400px;
-    font-size: 20px;
+    width: 30vw;
+    font-size: 3vh;
     color: white;
 
   }
@@ -151,14 +146,14 @@
     flex-direction: row;
     justify-content: center;
     font-family:"Consolas";
-    height: 580px;
+    height: 90vh;
     
   }
 
   .reload{
-    width: 150px;
-    height: 30px;
-    margin-top: 50px;
+    width: 10vw;
+    height: 5vh;
+    margin-top: 8vh;
     margin-bottom: 0px;
     font-family:"Consolas";
     border-radius: 10px;
@@ -166,10 +161,11 @@
     cursor: pointer;
     border-color: #ffffff;
     color: black;
+    border: 0.4vh;
      box-shadow: 0 0 5px 5px rgb(39, 39, 39);
      -webkit-transition: all 150ms ease-in-out;
     transition: 0.5s;
-    font-size: 20px;
+    font-size: 3vh;
     font-weight: bold;
 }
 
@@ -185,9 +181,9 @@
 }
 
 .reloadd{
-    width: 160px;
-    height: 60px;
-    margin-top: 120px;
+    width: 15vw;
+    height: 8vh;
+    margin-top: 22vh;
     margin-bottom: 0px;
     font-family:"Consolas";
     border-radius: 10px;
@@ -198,7 +194,7 @@
      box-shadow: 0 0 5px 5px rgb(39, 39, 39);
      -webkit-transition: all 150ms ease-in-out;
     transition: 0.5s;
-    font-size: 25px;
+    font-size: 4vh;
     font-weight: bold;
 }
 
