@@ -1,7 +1,7 @@
 .select{
-    width: 80px;
-    height: 30px;
-    margin-bottom: 15px;
+    width: 6vw;
+    height: 5vh;
+    margin-bottom: 0;
     font-family:"Consolas";
     border-radius: 10px;
     background-color: rgb(53, 52, 52);
@@ -10,7 +10,7 @@
     margin-left: 5px;
     margin-right: 5px;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 2.5vh;
     cursor: pointer;
 }
 
@@ -31,5 +31,6 @@
     color: white;
     font-weight: bold;
     margin-bottom: 0px;
+    font-size: 2.5vh;
 }
 

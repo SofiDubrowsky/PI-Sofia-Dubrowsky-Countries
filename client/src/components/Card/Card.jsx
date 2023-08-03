@@ -7,17 +7,17 @@ import { NavLink } from "react-router-dom";
 const Card = ({ id, name, flag_img, continent }) => {
   return (
     <NavLink to={`/detail/${id}`}>
-    <div className={CardStyles.divCard}>
-      <div className={CardStyles.divTop}>
-        <div className={CardStyles.divImg}>
-          <img className={CardStyles.imgCard} src={flag_img} alt="Country" />
-        </div>
-        <div className={CardStyles.divTitles}>
-          <h4 className={CardStyles.title}>{name}</h4>
-          <h6 className={CardStyles.subtitle}>Continent: {continent}</h6>
+      <div className={CardStyles.divCard}>
+        <div className={CardStyles.divTop}>
+          <div className={CardStyles.divImg}>
+            <img className={CardStyles.imgCard} src={flag_img} alt="Country" />
+          </div>
+          <div className={CardStyles.divTitles}>
+            <h4 className={CardStyles.title}>{name}</h4>
+            <h6 className={CardStyles.subtitle}>Continent: {continent}</h6>
+          </div>
         </div>
       </div>
-    </div>
     </NavLink>
   );
 };

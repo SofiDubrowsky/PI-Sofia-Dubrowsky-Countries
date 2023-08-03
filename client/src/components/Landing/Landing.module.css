@@ -37,7 +37,7 @@
 }
 
 .textBig {
-  font-size: 2rem;
+  font-size: 5vh;
   margin-top: 0;
   align-items: center;
   align-content: center;
@@ -46,7 +46,7 @@
 }
 
 .textsmall {
-  font-size: 1.5rem;
+  font-size: 4vh;
   margin-bottom: 0;
   text-align: center;
   color: rgb(0, 0, 0);
@@ -82,8 +82,8 @@ a:active {
 }
 
 .img {
-  height: 2rem;
-  width: 2rem;
+  height: 4vh;
+  width: 4vh;
   margin-left: 0.5rem;
   margin-right: 0;
   transition: 0.5s;
@@ -105,7 +105,7 @@ a:active {
 
 .rosa {
   margin-top: 30px;
-  height: 150px;
+  height: 25vh;
   transition: 0.5s;
   align-items: center;
   align-content: center;
